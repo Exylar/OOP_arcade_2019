@@ -1,0 +1,44 @@
+/*! \mainpage My Personal Index Page
+ *
+ * \section intro_sec Introduction
+ *
+ * The arcade is a project which can work properly with multiple games and multiple display
+ * Arcade binary is given with 2 games (nibbler & solarfox) and 3 graphic librairy (sfml, libcaca & ncurses)
+ *
+ * this documentation provide a set of instruction for create your own game and graphic librairy
+ *
+ * \section Basics
+ * 
+ If you plans to create your game lib, your main game class must inherit from IGameModule and redifine all its methods.\n
+ If you plans to create your graphic lib, your main lib class must inherit from IDisplayModule module and redifine all its methods.\n\n
+ Check the documentation for know the functions.
+ *
+ * \subsection step1 1\ Display
+ * For more informations about Display functions, see the doc of IDisplayModule
+ * An display lib is divided in 3 parts: \n
+ ° Core interaction (permit to exit, switch lib/games, ...)\n
+ ° Event handle (isKeyPressed, isKeyPressedOnce)\n
+ ° drawing (putRect, putPixel, putCircle, ...)\n\n
+ *
+ * You must redifine your own all function defined in IDisplayModule in you main GraphicalLib main class
+ \nAn .so file must be generated and moved in lib/ directory
+ * Also you must have a createLib function outside your class follow this symbol:\n
+  std::unique_ptr<IDisplayModule>createLib(void)\n
+  this function must be enclosed by extern "C"{}
+
+ * \subsection step2 2\ Game
+ * For more informations about Game functions, see doc of IGameModule
+ * An game lib is divided in 2 parts: \n
+ ° Gameplay: (update, render) who contains all function for the game works properly\n\n
+ ° Highscore: system for log the score into a specific file, using HighscoreCore is the best way to handle this\n
+ *
+ * You must redifine your own all function defined in IGameModule in you main game main class
+ \nAn .so file must be generated and moved in games/ directory
+ * Also you must have a createLib function outside your class follow this symbol:\n
+  std::unique_ptr<IGameModule>createLib(void)\n
+  this function must be enclosed by extern "C"{}
+ *
+ *
+ *
+ * And that all. enjoy ;-) And code safe.
+ */

@@ -1,0 +1,132 @@
+\hypertarget{class_highscore_core}{}\section{Highscore\+Core Class Reference}
+\label{class_highscore_core}\index{Highscore\+Core@{Highscore\+Core}}
+
+
+utils class for read an write scores  
+
+
+
+
+{\ttfamily \#include $<$Highscore\+Core.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_highscore_core_a5c0000d4513844f8c37e3b8f6f359219}{load\+From\+File} (const std\+::string \&filepath)
+\begin{DoxyCompactList}\small\item\em Load the score to this class, call this in the constructor of your Game\+Module main class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_highscore_core_a92f6f400c71a9a9546a7a1d2b6f04468}\label{class_highscore_core_a92f6f400c71a9a9546a7a1d2b6f04468}} 
+void \hyperlink{class_highscore_core_a92f6f400c71a9a9546a7a1d2b6f04468}{dump} ()
+\begin{DoxyCompactList}\small\item\em debug fonction, log all files in std\+::out \end{DoxyCompactList}\item 
+bool \hyperlink{class_highscore_core_a7a86c95f26a7b0d527f639f94bf96301}{save\+To\+File} (const std\+::string \&filepath)
+\begin{DoxyCompactList}\small\item\em Save all stored score in the file (sorted) \end{DoxyCompactList}\item 
+void \hyperlink{class_highscore_core_a12de8f889c9990f769245fc967caa129}{addscore} (const std\+::string \&playername, int score)
+\begin{DoxyCompactList}\small\item\em Store file in this class. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \hyperlink{class_highscore_core_a8d80890801631184899061cdd3e5dcbe}{get\+Best\+Scores} () const
+\begin{DoxyCompactList}\small\item\em get the 16 best scores (sorted) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_highscore_core_a0818c9f9abda1ffe1c7a92ba5b786c97}\label{class_highscore_core_a0818c9f9abda1ffe1c7a92ba5b786c97}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries strtok} (std\+::string const \&s, std\+::string const \&token)
+\item 
+\mbox{\Hypertarget{class_highscore_core_a2782451af0ede796aebb38cde02250b5}\label{class_highscore_core_a2782451af0ede796aebb38cde02250b5}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries read\+File} (std\+::string const \&filename)
+\item 
+\mbox{\Hypertarget{class_highscore_core_a06eadb90bc265b782891da9f1544b071}\label{class_highscore_core_a06eadb90bc265b782891da9f1544b071}} 
+void {\bfseries sort\+Scores} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_highscore_core_aa196303e37f40a1ea4134cc8a970dd8a}\label{class_highscore_core_aa196303e37f40a1ea4134cc8a970dd8a}} 
+bool {\bfseries \+\_\+on\+Error} = false
+\item 
+\mbox{\Hypertarget{class_highscore_core_a117cf18d60ae402c75c9694e7fd96cda}\label{class_highscore_core_a117cf18d60ae402c75c9694e7fd96cda}} 
+std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ {\bfseries \+\_\+scores}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+utils class for read an write scores 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_highscore_core_a12de8f889c9990f769245fc967caa129}\label{class_highscore_core_a12de8f889c9990f769245fc967caa129}} 
+\index{Highscore\+Core@{Highscore\+Core}!addscore@{addscore}}
+\index{addscore@{addscore}!Highscore\+Core@{Highscore\+Core}}
+\subsubsection{\texorpdfstring{addscore()}{addscore()}}
+{\footnotesize\ttfamily void Highscore\+Core\+::addscore (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{playername,  }\item[{int}]{score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Store file in this class. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_highscore_core_a7a86c95f26a7b0d527f639f94bf96301}{save\+To\+File} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em playername} & name of the player logged \\
+\hline
+{\em score} & in represent the score of the current ame session \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_highscore_core_a8d80890801631184899061cdd3e5dcbe}\label{class_highscore_core_a8d80890801631184899061cdd3e5dcbe}} 
+\index{Highscore\+Core@{Highscore\+Core}!get\+Best\+Scores@{get\+Best\+Scores}}
+\index{get\+Best\+Scores@{get\+Best\+Scores}!Highscore\+Core@{Highscore\+Core}}
+\subsubsection{\texorpdfstring{get\+Best\+Scores()}{getBestScores()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$std\+::string, int$>$ $>$ Highscore\+Core\+::get\+Best\+Scores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the 16 best scores (sorted) 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_highscore_core_a5c0000d4513844f8c37e3b8f6f359219}{load\+From\+File} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+16 best score 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_highscore_core_a5c0000d4513844f8c37e3b8f6f359219}\label{class_highscore_core_a5c0000d4513844f8c37e3b8f6f359219}} 
+\index{Highscore\+Core@{Highscore\+Core}!load\+From\+File@{load\+From\+File}}
+\index{load\+From\+File@{load\+From\+File}!Highscore\+Core@{Highscore\+Core}}
+\subsubsection{\texorpdfstring{load\+From\+File()}{loadFromFile()}}
+{\footnotesize\ttfamily bool Highscore\+Core\+::load\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Load the score to this class, call this in the constructor of your Game\+Module main class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & the file which contains the score \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool -\/$>$ true if success / false if fail 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_highscore_core_a7a86c95f26a7b0d527f639f94bf96301}\label{class_highscore_core_a7a86c95f26a7b0d527f639f94bf96301}} 
+\index{Highscore\+Core@{Highscore\+Core}!save\+To\+File@{save\+To\+File}}
+\index{save\+To\+File@{save\+To\+File}!Highscore\+Core@{Highscore\+Core}}
+\subsubsection{\texorpdfstring{save\+To\+File()}{saveToFile()}}
+{\footnotesize\ttfamily bool Highscore\+Core\+::save\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Save all stored score in the file (sorted) 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_highscore_core_a12de8f889c9990f769245fc967caa129}{addscore} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & the filepath of file to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+success 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Highscore\+Core.\+hpp\end{DoxyCompactItemize}

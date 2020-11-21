@@ -1,0 +1,168 @@
+\hypertarget{class_i_game_module}{}\section{I\+Game\+Module Class Reference}
+\label{class_i_game_module}\index{I\+Game\+Module@{I\+Game\+Module}}
+
+
+You Game class must inherit from \hyperlink{class_i_game_module}{I\+Game\+Module} and have an extern create\+Lib function for work properly.  
+
+
+
+
+{\ttfamily \#include $<$I\+Game\+Module.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_game_module_a116b1a9109725f6e8a52479d8126bc2c}\label{class_i_game_module_a116b1a9109725f6e8a52479d8126bc2c}} 
+virtual void \hyperlink{class_i_game_module_a116b1a9109725f6e8a52479d8126bc2c}{reset} ()=0
+\begin{DoxyCompactList}\small\item\em Reset game at any moment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_game_module_afc7f0c9a48c885ee920dbfea99ae91d9}\label{class_i_game_module_afc7f0c9a48c885ee920dbfea99ae91d9}} 
+virtual bool \hyperlink{class_i_game_module_afc7f0c9a48c885ee920dbfea99ae91d9}{load\+From\+File} (const std\+::string \&filepath)=0
+\begin{DoxyCompactList}\small\item\em Load highscores from file and return wether it worked or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_game_module_a0fd38da232d3d362f64fe87274391add}\label{class_i_game_module_a0fd38da232d3d362f64fe87274391add}} 
+virtual bool \hyperlink{class_i_game_module_a0fd38da232d3d362f64fe87274391add}{load\+From\+File} ()=0
+\begin{DoxyCompactList}\small\item\em Load highscores from file and return wether it worked or not. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_i_game_module_a03f9bf4061f7f52356a768f984c372ae}{save\+To\+File} (const std\+::string \&filepath) const =0
+\begin{DoxyCompactList}\small\item\em save highscores to file \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_i_game_module_aa2db580e935b917bdcfbd480771d2e8a}{save\+To\+File} () const =0
+\begin{DoxyCompactList}\small\item\em save highscores to default file \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_i_game_module_ac4ca30b5a3fef73f213729baaaa98a46}{set\+Player\+Name} (const std\+::string \&name)=0
+\begin{DoxyCompactList}\small\item\em Set the player\textquotesingle{}s name for the highscore. \end{DoxyCompactList}\item 
+virtual std\+::pair$<$ std\+::string, int $>$ \hyperlink{class_i_game_module_a10133f024c107b05c37510facf27c21c}{get\+Score} () const =0
+\begin{DoxyCompactList}\small\item\em get the current score (the last) \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \hyperlink{class_i_game_module_ac83b190c55b2557d06bbec22746c2c17}{get\+Best\+Scores} () const =0
+\begin{DoxyCompactList}\small\item\em get the 16 best scores \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_i_game_module_ab49e35fa262602b563131ddacce11b7c}{update} (const \hyperlink{class_i_display_module}{I\+Display\+Module} \&lib)=0
+\begin{DoxyCompactList}\small\item\em update the game, do all change to internal here (event, moves, ...) \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_i_game_module_a6a2489a66aaea6255e35b6f025d08460}{render} (\hyperlink{class_i_display_module}{I\+Display\+Module} \&lib) const =0
+\begin{DoxyCompactList}\small\item\em render your game, all display must be here \end{DoxyCompactList}\item 
+virtual const std\+::string \& \hyperlink{class_i_game_module_aef6b69aca908bbbc77e52b729afd1ced}{get\+Lib\+Name} () const =0
+\begin{DoxyCompactList}\small\item\em get the lib name \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+You Game class must inherit from \hyperlink{class_i_game_module}{I\+Game\+Module} and have an extern create\+Lib function for work properly. 
+
+extern \char`\"{}\+C\char`\"{} \{ std\+::unique\+\_\+ptr$<$\+I\+Game\+Module$>$create\+Lib(void) \{ return std\+::make\+\_\+unique$<$\+Your\+Class$>$(); \} \} 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_game_module_ac83b190c55b2557d06bbec22746c2c17}\label{class_i_game_module_ac83b190c55b2557d06bbec22746c2c17}} 
+\index{I\+Game\+Module@{I\+Game\+Module}!get\+Best\+Scores@{get\+Best\+Scores}}
+\index{get\+Best\+Scores@{get\+Best\+Scores}!I\+Game\+Module@{I\+Game\+Module}}
+\subsubsection{\texorpdfstring{get\+Best\+Scores()}{getBestScores()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::pair$<$std\+::string, int$>$ $>$ I\+Game\+Module\+::get\+Best\+Scores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get the 16 best scores 
+
+\begin{DoxyReturn}{Returns}
+16 best score of this game (sorted) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_game_module_aef6b69aca908bbbc77e52b729afd1ced}\label{class_i_game_module_aef6b69aca908bbbc77e52b729afd1ced}} 
+\index{I\+Game\+Module@{I\+Game\+Module}!get\+Lib\+Name@{get\+Lib\+Name}}
+\index{get\+Lib\+Name@{get\+Lib\+Name}!I\+Game\+Module@{I\+Game\+Module}}
+\subsubsection{\texorpdfstring{get\+Lib\+Name()}{getLibName()}}
+{\footnotesize\ttfamily virtual const std\+::string\& I\+Game\+Module\+::get\+Lib\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get the lib name 
+
+\begin{DoxyReturn}{Returns}
+the lib name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_game_module_a10133f024c107b05c37510facf27c21c}\label{class_i_game_module_a10133f024c107b05c37510facf27c21c}} 
+\index{I\+Game\+Module@{I\+Game\+Module}!get\+Score@{get\+Score}}
+\index{get\+Score@{get\+Score}!I\+Game\+Module@{I\+Game\+Module}}
+\subsubsection{\texorpdfstring{get\+Score()}{getScore()}}
+{\footnotesize\ttfamily virtual std\+::pair$<$std\+::string, int$>$ I\+Game\+Module\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get the current score (the last) 
+
+\begin{DoxyReturn}{Returns}
+the last score 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_game_module_a6a2489a66aaea6255e35b6f025d08460}\label{class_i_game_module_a6a2489a66aaea6255e35b6f025d08460}} 
+\index{I\+Game\+Module@{I\+Game\+Module}!render@{render}}
+\index{render@{render}!I\+Game\+Module@{I\+Game\+Module}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void I\+Game\+Module\+::render (\begin{DoxyParamCaption}\item[{\hyperlink{class_i_display_module}{I\+Display\+Module} \&}]{lib }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+render your game, all display must be here 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lib,provided} & by the core (don\textquotesingle{}t call it yourself), use this only for drawing \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_game_module_a03f9bf4061f7f52356a768f984c372ae}\label{class_i_game_module_a03f9bf4061f7f52356a768f984c372ae}} 
+\index{I\+Game\+Module@{I\+Game\+Module}!save\+To\+File@{save\+To\+File}}
+\index{save\+To\+File@{save\+To\+File}!I\+Game\+Module@{I\+Game\+Module}}
+\subsubsection{\texorpdfstring{save\+To\+File()}{saveToFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool I\+Game\+Module\+::save\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filepath }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+save highscores to file 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_highscore_core}{Highscore\+Core} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+sucess 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_game_module_aa2db580e935b917bdcfbd480771d2e8a}\label{class_i_game_module_aa2db580e935b917bdcfbd480771d2e8a}} 
+\index{I\+Game\+Module@{I\+Game\+Module}!save\+To\+File@{save\+To\+File}}
+\index{save\+To\+File@{save\+To\+File}!I\+Game\+Module@{I\+Game\+Module}}
+\subsubsection{\texorpdfstring{save\+To\+File()}{saveToFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool I\+Game\+Module\+::save\+To\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+save highscores to default file 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_highscore_core}{Highscore\+Core} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+sucess 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_game_module_ac4ca30b5a3fef73f213729baaaa98a46}\label{class_i_game_module_ac4ca30b5a3fef73f213729baaaa98a46}} 
+\index{I\+Game\+Module@{I\+Game\+Module}!set\+Player\+Name@{set\+Player\+Name}}
+\index{set\+Player\+Name@{set\+Player\+Name}!I\+Game\+Module@{I\+Game\+Module}}
+\subsubsection{\texorpdfstring{set\+Player\+Name()}{setPlayerName()}}
+{\footnotesize\ttfamily virtual void I\+Game\+Module\+::set\+Player\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the player\textquotesingle{}s name for the highscore. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_game_module_ab49e35fa262602b563131ddacce11b7c}\label{class_i_game_module_ab49e35fa262602b563131ddacce11b7c}} 
+\index{I\+Game\+Module@{I\+Game\+Module}!update@{update}}
+\index{update@{update}!I\+Game\+Module@{I\+Game\+Module}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void I\+Game\+Module\+::update (\begin{DoxyParamCaption}\item[{const \hyperlink{class_i_display_module}{I\+Display\+Module} \&}]{lib }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+update the game, do all change to internal here (event, moves, ...) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lib} & an I\+Display\+Lib, provided by the core, dont call it yourself, use this only for events \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/I\+Game\+Module.\+hpp\end{DoxyCompactItemize}

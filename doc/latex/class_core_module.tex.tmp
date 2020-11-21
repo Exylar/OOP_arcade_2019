@@ -1,0 +1,98 @@
+\hypertarget{class_core_module}{}\section{Core\+Module Class Reference}
+\label{class_core_module}\index{Core\+Module@{Core\+Module}}
+
+
+Collaboration diagram for Core\+Module\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_core_module_a6e47ca9830eb4e6bd45f1a21711fd5e7}\label{class_core_module_a6e47ca9830eb4e6bd45f1a21711fd5e7}} 
+{\bfseries Core\+Module} (const std\+::string \&librarypath)
+\item 
+\mbox{\Hypertarget{class_core_module_a997a210e5848d92f8bea176415037fd5}\label{class_core_module_a997a210e5848d92f8bea176415037fd5}} 
+void {\bfseries loop} ()
+\item 
+\mbox{\Hypertarget{class_core_module_a7c60adbf597319769e4cee6c6b3bc39c}\label{class_core_module_a7c60adbf597319769e4cee6c6b3bc39c}} 
+void {\bfseries reset} ()
+\item 
+\mbox{\Hypertarget{class_core_module_a5f4a9d4ea089beb9593749a2e0a3c6b0}\label{class_core_module_a5f4a9d4ea089beb9593749a2e0a3c6b0}} 
+void {\bfseries previous\+Graph\+Lib} ()
+\item 
+\mbox{\Hypertarget{class_core_module_a19247e69abd9a8990a4f0cf185e7ffea}\label{class_core_module_a19247e69abd9a8990a4f0cf185e7ffea}} 
+void {\bfseries next\+Graph\+Lib} ()
+\item 
+\mbox{\Hypertarget{class_core_module_a9edf01a5197f5933b1c8e0cd326e8254}\label{class_core_module_a9edf01a5197f5933b1c8e0cd326e8254}} 
+void {\bfseries previous\+Game} ()
+\item 
+\mbox{\Hypertarget{class_core_module_ae0c049ae962f4743502905db874012f6}\label{class_core_module_ae0c049ae962f4743502905db874012f6}} 
+void {\bfseries next\+Game} ()
+\item 
+\mbox{\Hypertarget{class_core_module_a7aedf16a68c5b50cb625fa4c641a0ddd}\label{class_core_module_a7aedf16a68c5b50cb625fa4c641a0ddd}} 
+void {\bfseries menu} ()
+\item 
+\mbox{\Hypertarget{class_core_module_a449d0d1f9367a0d9c6d6eeaf94e02b76}\label{class_core_module_a449d0d1f9367a0d9c6d6eeaf94e02b76}} 
+void {\bfseries prompt} ()
+\item 
+\mbox{\Hypertarget{class_core_module_a5266f4b1b075dfb02d1ab57b37b53eda}\label{class_core_module_a5266f4b1b075dfb02d1ab57b37b53eda}} 
+void {\bfseries score} ()
+\item 
+\mbox{\Hypertarget{class_core_module_a420fd00a90f8acb0974086605dfdf818}\label{class_core_module_a420fd00a90f8acb0974086605dfdf818}} 
+void {\bfseries exit} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_core_module_a3a517cbb4b22c97700b352365af70cbb}\label{class_core_module_a3a517cbb4b22c97700b352365af70cbb}} 
+std\+::string {\bfseries \+\_\+playername} = \char`\"{}Guest\char`\"{}
+\item 
+\mbox{\Hypertarget{class_core_module_aec3027b7d3b31450969a8a11e0323f88}\label{class_core_module_aec3027b7d3b31450969a8a11e0323f88}} 
+\hyperlink{class_prompt}{Prompt} {\bfseries \+\_\+prompt}
+\item 
+\mbox{\Hypertarget{class_core_module_ab25dc91171e23356987d423d56fdfe87}\label{class_core_module_ab25dc91171e23356987d423d56fdfe87}} 
+\hyperlink{class_highscore_screen}{Highscore\+Screen} {\bfseries \+\_\+score}
+\item 
+\mbox{\Hypertarget{class_core_module_a3bf00bb077fbd08f7500fe4eb6f31907}\label{class_core_module_a3bf00bb077fbd08f7500fe4eb6f31907}} 
+\hyperlink{class_i_display_module}{I\+Display\+Module} $\ast$ {\bfseries \+\_\+display}
+\item 
+\mbox{\Hypertarget{class_core_module_ad843cec670bd0e42b5080712bc98535d}\label{class_core_module_ad843cec670bd0e42b5080712bc98535d}} 
+std\+::unique\+\_\+ptr$<$ \hyperlink{class_i_game_module}{I\+Game\+Module} $>$ {\bfseries \+\_\+game}
+\item 
+\mbox{\Hypertarget{class_core_module_ae008149d6b001c784e7163855431d37a}\label{class_core_module_ae008149d6b001c784e7163855431d37a}} 
+\hyperlink{class_so_loader}{So\+Loader}$<$ \hyperlink{class_i_display_module}{I\+Display\+Module} $>$ $\ast$ {\bfseries \+\_\+display\+So}
+\item 
+\mbox{\Hypertarget{class_core_module_a18f2e426be92dbbd3ac4ee4888a3c61c}\label{class_core_module_a18f2e426be92dbbd3ac4ee4888a3c61c}} 
+\hyperlink{class_so_loader}{So\+Loader}$<$ \hyperlink{class_i_game_module}{I\+Game\+Module} $>$ $\ast$ {\bfseries \+\_\+game\+So}
+\item 
+\mbox{\Hypertarget{class_core_module_a2538a90ee4613638710dc72811ccb3da}\label{class_core_module_a2538a90ee4613638710dc72811ccb3da}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries \+\_\+displays}
+\item 
+\mbox{\Hypertarget{class_core_module_a614578eaa5c1c537a5cf04791e077a5f}\label{class_core_module_a614578eaa5c1c537a5cf04791e077a5f}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries \+\_\+games}
+\item 
+\mbox{\Hypertarget{class_core_module_a7ab77418e65e7c1f4b7b3a76248834c9}\label{class_core_module_a7ab77418e65e7c1f4b7b3a76248834c9}} 
+size\+\_\+t {\bfseries \+\_\+number\+\_\+displays} = 0
+\item 
+\mbox{\Hypertarget{class_core_module_ad29aa3a89af0e8c9bad071d0fc4d16a4}\label{class_core_module_ad29aa3a89af0e8c9bad071d0fc4d16a4}} 
+size\+\_\+t {\bfseries \+\_\+number\+\_\+current\+\_\+displays} = 0
+\item 
+\mbox{\Hypertarget{class_core_module_ac8e8976fdd2640e1dbb4894370858ceb}\label{class_core_module_ac8e8976fdd2640e1dbb4894370858ceb}} 
+size\+\_\+t {\bfseries \+\_\+number\+\_\+games} = 0
+\item 
+\mbox{\Hypertarget{class_core_module_a54c22ff3b242409c6e11c83e51330931}\label{class_core_module_a54c22ff3b242409c6e11c83e51330931}} 
+size\+\_\+t {\bfseries \+\_\+number\+\_\+current\+\_\+games} = 0
+\item 
+\mbox{\Hypertarget{class_core_module_a65b0702c6585c18a21d081c86858c96a}\label{class_core_module_a65b0702c6585c18a21d081c86858c96a}} 
+status {\bfseries \+\_\+status} = M\+E\+NU
+\item 
+\mbox{\Hypertarget{class_core_module_a3006d6d64588337a3646e433601a0527}\label{class_core_module_a3006d6d64588337a3646e433601a0527}} 
+status {\bfseries \+\_\+selected} = P\+R\+O\+M\+PT
+\item 
+\mbox{\Hypertarget{class_core_module_a07628ba7e5a5adbfb39a5fcbdb4c6548}\label{class_core_module_a07628ba7e5a5adbfb39a5fcbdb4c6548}} 
+bool {\bfseries \+\_\+exit} = false
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Core\+Module.\+hpp\end{DoxyCompactItemize}

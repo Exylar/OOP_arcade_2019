@@ -1,0 +1,417 @@
+\hypertarget{class_i_display_module}{}\section{I\+Display\+Module Class Reference}
+\label{class_i_display_module}\index{I\+Display\+Module@{I\+Display\+Module}}
+
+
+You Display class must inherit from \hyperlink{class_i_display_module}{I\+Display\+Module} and have an extern create\+Lib function for work properly.  
+
+
+
+
+{\ttfamily \#include $<$I\+Display\+Module.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_i_display_module_a1130023f28ca7d10e4a04ef9b698fcbb}{Colors} \{ \newline
+{\bfseries D\+E\+F\+A\+U\+LT}, 
+{\bfseries B\+L\+A\+CK}, 
+{\bfseries R\+ED}, 
+{\bfseries G\+R\+E\+EN}, 
+\newline
+{\bfseries Y\+E\+L\+L\+OW}, 
+{\bfseries B\+L\+UE}, 
+{\bfseries M\+A\+G\+E\+N\+TA}, 
+{\bfseries C\+Y\+AN}, 
+\newline
+{\bfseries L\+I\+G\+H\+T\+\_\+\+G\+R\+AY}, 
+{\bfseries D\+A\+R\+K\+\_\+\+G\+R\+AY}, 
+{\bfseries L\+I\+G\+H\+T\+\_\+\+R\+ED}, 
+{\bfseries L\+I\+G\+H\+T\+\_\+\+G\+R\+E\+EN}, 
+\newline
+{\bfseries L\+I\+G\+H\+T\+\_\+\+Y\+E\+L\+L\+OW}, 
+{\bfseries L\+I\+G\+H\+T\+\_\+\+B\+L\+UE}, 
+{\bfseries L\+I\+G\+H\+T\+\_\+\+M\+A\+G\+E\+N\+TA}, 
+{\bfseries L\+I\+G\+H\+T\+\_\+\+C\+Y\+AN}, 
+\newline
+{\bfseries W\+H\+I\+TE}, 
+{\bfseries C\+O\+L\+O\+R\+S\+\_\+\+E\+ND}
+ \}
+\item 
+enum \hyperlink{class_i_display_module_ac77668b52466bcd2dbd8446e5bfe412f}{Keys} \{ \newline
+{\bfseries L\+E\+FT}, 
+{\bfseries R\+I\+G\+HT}, 
+{\bfseries UP}, 
+{\bfseries D\+O\+WN}, 
+\newline
+{\bfseries Z}, 
+{\bfseries Q}, 
+{\bfseries S}, 
+{\bfseries D}, 
+\newline
+{\bfseries A}, 
+{\bfseries E}, 
+{\bfseries W}, 
+{\bfseries X}, 
+\newline
+{\bfseries S\+P\+A\+CE}, 
+{\bfseries J}, 
+{\bfseries K}, 
+{\bfseries U}, 
+\newline
+{\bfseries I}, 
+{\bfseries E\+N\+T\+ER}, 
+{\bfseries B\+A\+C\+K\+S\+P\+A\+CE}, 
+{\bfseries K\+E\+Y\+S\+\_\+\+E\+ND}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_i_display_module_ad78d193932e1fd55d4e956fc8e5cde88}{reset} ()=0
+\item 
+\mbox{\Hypertarget{class_i_display_module_a54616e1c980d64bf92e0a2322adba074}\label{class_i_display_module_a54616e1c980d64bf92e0a2322adba074}} 
+virtual void \hyperlink{class_i_display_module_a54616e1c980d64bf92e0a2322adba074}{open} ()=0
+\begin{DoxyCompactList}\small\item\em Opens / inits the window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_display_module_a32df0a3ed2c9b27eebbbb844bffbbba2}\label{class_i_display_module_a32df0a3ed2c9b27eebbbb844bffbbba2}} 
+virtual void \hyperlink{class_i_display_module_a32df0a3ed2c9b27eebbbb844bffbbba2}{close} ()=0
+\begin{DoxyCompactList}\small\item\em Closes / destroys the window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_display_module_a939107266bbb08eb1d84f37914dcada4}\label{class_i_display_module_a939107266bbb08eb1d84f37914dcada4}} 
+virtual bool \hyperlink{class_i_display_module_a939107266bbb08eb1d84f37914dcada4}{is\+Open} () const =0
+\begin{DoxyCompactList}\small\item\em Check if the window is open. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_i_display_module_ab5fb374a14b78037eab463b2cb1971dd}{switch\+To\+Next\+Lib} () const =0
+\item 
+virtual bool \hyperlink{class_i_display_module_a1e23d65af2b94dda013055af15100ebe}{switch\+To\+Previous\+Lib} () const =0
+\item 
+virtual bool \hyperlink{class_i_display_module_a7b6a45861835b29679c6c5799b63c4f1}{switch\+To\+Next\+Game} () const =0
+\item 
+virtual bool \hyperlink{class_i_display_module_a09e20d4bbf16ac3aff8f62c54b4814e3}{switch\+To\+Previous\+Game} () const =0
+\item 
+virtual bool \hyperlink{class_i_display_module_ab3df0440b279e6e9ad631f43b61cb9ac}{should\+Be\+Restarted} () const =0
+\item 
+virtual bool \hyperlink{class_i_display_module_a305f8c4085dd4555c210f09e625395a8}{should\+Go\+To\+Menu} () const =0
+\item 
+virtual bool \hyperlink{class_i_display_module_a9ed6fcb0e0aaccc0da0617f96fe46582}{should\+Exit} () const =0
+\item 
+virtual bool \hyperlink{class_i_display_module_a1fdf2455de8a31974c89d7d2c717a8ef}{is\+Key\+Pressed} (\hyperlink{class_i_display_module_ac77668b52466bcd2dbd8446e5bfe412f}{I\+Display\+Module\+::\+Keys}) const =0
+\begin{DoxyCompactList}\small\item\em Handle Inputs \& Events. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_i_display_module_a50c442d1c03f9f989e4500afa8a7294c}{is\+Key\+Pressed\+Once} (\hyperlink{class_i_display_module_ac77668b52466bcd2dbd8446e5bfe412f}{I\+Display\+Module\+::\+Keys}) const =0
+\begin{DoxyCompactList}\small\item\em Handle Inputs \& Events, but only once by key pressed. \end{DoxyCompactList}\item 
+virtual float \hyperlink{class_i_display_module_a21d9f0b15b586f53073c76e0d586bc88}{get\+Delta} () const =0
+\item 
+\mbox{\Hypertarget{class_i_display_module_ad2572a5cce2065ac2772153b7056a1b7}\label{class_i_display_module_ad2572a5cce2065ac2772153b7056a1b7}} 
+virtual void \hyperlink{class_i_display_module_ad2572a5cce2065ac2772153b7056a1b7}{clear} () const =0
+\begin{DoxyCompactList}\small\item\em clear the window \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_display_module_ab596639a32c5399c806ed95494cd8ddb}\label{class_i_display_module_ab596639a32c5399c806ed95494cd8ddb}} 
+virtual void \hyperlink{class_i_display_module_ab596639a32c5399c806ed95494cd8ddb}{update} ()=0
+\begin{DoxyCompactList}\small\item\em update the window and handle basic events \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_display_module_ae4a582ce9f12662c916c189bba12cdb7}\label{class_i_display_module_ae4a582ce9f12662c916c189bba12cdb7}} 
+virtual void \hyperlink{class_i_display_module_ae4a582ce9f12662c916c189bba12cdb7}{render} () const =0
+\begin{DoxyCompactList}\small\item\em apply drawing function to the window \end{DoxyCompactList}\item 
+virtual char \hyperlink{class_i_display_module_aefd588066cd4ede668497dbc4ad23b9d}{get\+Key\+Code} () const =0
+\item 
+virtual void \hyperlink{class_i_display_module_ad65106183d94d0019912b7c047ab0551}{set\+Color} (\hyperlink{class_i_display_module_a1130023f28ca7d10e4a04ef9b698fcbb}{I\+Display\+Module\+::\+Colors} col)=0
+\item 
+virtual void \hyperlink{class_i_display_module_a07807e9883aaa1b591727eae9fdd1cc8}{put\+Pixel} (float x, float y) const =0
+\begin{DoxyCompactList}\small\item\em Display a pixel. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_i_display_module_a2dd7bf5b2a430473d21fca846181e2fb}{put\+Line} (float x1, float y1, float x2, float y2) const =0
+\begin{DoxyCompactList}\small\item\em Display a line. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_i_display_module_a535b8212a9e2eaa43517c7c3a8aad0ac}{put\+Rect} (float x, float y, float w, float h) const =0
+\begin{DoxyCompactList}\small\item\em Display an empty rectangle. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_i_display_module_aae68e8485c4b87058a4ecdca7cc46094}{put\+Fill\+Rect} (float x, float y, float w, float h) const =0
+\begin{DoxyCompactList}\small\item\em Display a full rectangle. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_i_display_module_ad972f8b874b8339b1abb1d2bdbc30bc2}{put\+Circle} (float x, float y, float rad) const =0
+\begin{DoxyCompactList}\small\item\em Display an empty circle. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_i_display_module_a19302fcc5fb72ace6374fa26f5430d65}{put\+Fill\+Circle} (float x, float y, float rad) const =0
+\begin{DoxyCompactList}\small\item\em Display a full circle. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_i_display_module_abe8a1550641c226b49646abf54f21493}{put\+Text} (const std\+::string \&text, unsigned int size, float x, float y) const =0
+\begin{DoxyCompactList}\small\item\em Display some text. \end{DoxyCompactList}\item 
+virtual const std\+::string \& \hyperlink{class_i_display_module_a9bf79b064eeac8c3e2e5c8e018fef5bb}{get\+Lib\+Name} () const =0
+\begin{DoxyCompactList}\small\item\em get the lib name \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+You Display class must inherit from \hyperlink{class_i_display_module}{I\+Display\+Module} and have an extern create\+Lib function for work properly. 
+
+extern \char`\"{}\+C\char`\"{} \{ std\+::unique\+\_\+ptr$<$\+I\+Display\+Module$>$create\+Lib(void) \{ return std\+::make\+\_\+unique$<$\+Your\+Class$>$(); \} \} 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_i_display_module_a1130023f28ca7d10e4a04ef9b698fcbb}\label{class_i_display_module_a1130023f28ca7d10e4a04ef9b698fcbb}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!Colors@{Colors}}
+\index{Colors@{Colors}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{Colors}{Colors}}
+{\footnotesize\ttfamily enum \hyperlink{class_i_display_module_a1130023f28ca7d10e4a04ef9b698fcbb}{I\+Display\+Module\+::\+Colors}}
+
+Limited to the bash color codes in case colors aren\textquotesingle{}t handled by a library Limited to the bash color codes in case colors aren\textquotesingle{}t handled by a library \mbox{\Hypertarget{class_i_display_module_ac77668b52466bcd2dbd8446e5bfe412f}\label{class_i_display_module_ac77668b52466bcd2dbd8446e5bfe412f}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!Keys@{Keys}}
+\index{Keys@{Keys}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{Keys}{Keys}}
+{\footnotesize\ttfamily enum \hyperlink{class_i_display_module_ac77668b52466bcd2dbd8446e5bfe412f}{I\+Display\+Module\+::\+Keys}}
+
+Keys you have to implement, there are enough keys to have multiple keyboard configurations for every game You only need 6 keys for the core and 6 for the games. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_display_module_a21d9f0b15b586f53073c76e0d586bc88}\label{class_i_display_module_a21d9f0b15b586f53073c76e0d586bc88}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!get\+Delta@{get\+Delta}}
+\index{get\+Delta@{get\+Delta}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{get\+Delta()}{getDelta()}}
+{\footnotesize\ttfamily virtual float I\+Display\+Module\+::get\+Delta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the number of frames that passed between two calls to this function The games should not be frame dependant!! That\textquotesingle{}s why this is here. \mbox{\Hypertarget{class_i_display_module_aefd588066cd4ede668497dbc4ad23b9d}\label{class_i_display_module_aefd588066cd4ede668497dbc4ad23b9d}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!get\+Key\+Code@{get\+Key\+Code}}
+\index{get\+Key\+Code@{get\+Key\+Code}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{get\+Key\+Code()}{getKeyCode()}}
+{\footnotesize\ttfamily virtual char I\+Display\+Module\+::get\+Key\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Handle Text Input Get key Presses. \mbox{\Hypertarget{class_i_display_module_a9bf79b064eeac8c3e2e5c8e018fef5bb}\label{class_i_display_module_a9bf79b064eeac8c3e2e5c8e018fef5bb}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!get\+Lib\+Name@{get\+Lib\+Name}}
+\index{get\+Lib\+Name@{get\+Lib\+Name}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{get\+Lib\+Name()}{getLibName()}}
+{\footnotesize\ttfamily virtual const std\+::string\& I\+Display\+Module\+::get\+Lib\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get the lib name 
+
+\begin{DoxyReturn}{Returns}
+the lib name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_display_module_a1fdf2455de8a31974c89d7d2c717a8ef}\label{class_i_display_module_a1fdf2455de8a31974c89d7d2c717a8ef}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!is\+Key\+Pressed@{is\+Key\+Pressed}}
+\index{is\+Key\+Pressed@{is\+Key\+Pressed}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{is\+Key\+Pressed()}{isKeyPressed()}}
+{\footnotesize\ttfamily virtual bool I\+Display\+Module\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\hyperlink{class_i_display_module_ac77668b52466bcd2dbd8446e5bfe412f}{I\+Display\+Module\+::\+Keys}}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Handle Inputs \& Events. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_i_display_module_ac77668b52466bcd2dbd8446e5bfe412f}{Keys} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+true if the key is pressed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_display_module_a50c442d1c03f9f989e4500afa8a7294c}\label{class_i_display_module_a50c442d1c03f9f989e4500afa8a7294c}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!is\+Key\+Pressed\+Once@{is\+Key\+Pressed\+Once}}
+\index{is\+Key\+Pressed\+Once@{is\+Key\+Pressed\+Once}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{is\+Key\+Pressed\+Once()}{isKeyPressedOnce()}}
+{\footnotesize\ttfamily virtual bool I\+Display\+Module\+::is\+Key\+Pressed\+Once (\begin{DoxyParamCaption}\item[{\hyperlink{class_i_display_module_ac77668b52466bcd2dbd8446e5bfe412f}{I\+Display\+Module\+::\+Keys}}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Handle Inputs \& Events, but only once by key pressed. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_i_display_module_ac77668b52466bcd2dbd8446e5bfe412f}{Keys} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+true if the key is pressed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_display_module_ad972f8b874b8339b1abb1d2bdbc30bc2}\label{class_i_display_module_ad972f8b874b8339b1abb1d2bdbc30bc2}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!put\+Circle@{put\+Circle}}
+\index{put\+Circle@{put\+Circle}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{put\+Circle()}{putCircle()}}
+{\footnotesize\ttfamily virtual void I\+Display\+Module\+::put\+Circle (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{rad }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Display an empty circle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & coordinates in window \\
+\hline
+{\em y} & coordinates in window \\
+\hline
+{\em rad} & radius of the circle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_display_module_a19302fcc5fb72ace6374fa26f5430d65}\label{class_i_display_module_a19302fcc5fb72ace6374fa26f5430d65}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!put\+Fill\+Circle@{put\+Fill\+Circle}}
+\index{put\+Fill\+Circle@{put\+Fill\+Circle}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{put\+Fill\+Circle()}{putFillCircle()}}
+{\footnotesize\ttfamily virtual void I\+Display\+Module\+::put\+Fill\+Circle (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{rad }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Display a full circle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & coordinates in window \\
+\hline
+{\em y} & coordinates in window \\
+\hline
+{\em rad} & radius of the circle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_display_module_aae68e8485c4b87058a4ecdca7cc46094}\label{class_i_display_module_aae68e8485c4b87058a4ecdca7cc46094}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!put\+Fill\+Rect@{put\+Fill\+Rect}}
+\index{put\+Fill\+Rect@{put\+Fill\+Rect}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{put\+Fill\+Rect()}{putFillRect()}}
+{\footnotesize\ttfamily virtual void I\+Display\+Module\+::put\+Fill\+Rect (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{w,  }\item[{float}]{h }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Display a full rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & coordinates in window \\
+\hline
+{\em y} & coordinates in window \\
+\hline
+{\em w} & width of rect \\
+\hline
+{\em h} & height of rect \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_display_module_a2dd7bf5b2a430473d21fca846181e2fb}\label{class_i_display_module_a2dd7bf5b2a430473d21fca846181e2fb}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!put\+Line@{put\+Line}}
+\index{put\+Line@{put\+Line}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{put\+Line()}{putLine()}}
+{\footnotesize\ttfamily virtual void I\+Display\+Module\+::put\+Line (\begin{DoxyParamCaption}\item[{float}]{x1,  }\item[{float}]{y1,  }\item[{float}]{x2,  }\item[{float}]{y2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Display a line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & coordinates in window \\
+\hline
+{\em y1} & coordinates in window \\
+\hline
+{\em x2} & coordinates in window \\
+\hline
+{\em y2} & coordinates in window \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_display_module_a07807e9883aaa1b591727eae9fdd1cc8}\label{class_i_display_module_a07807e9883aaa1b591727eae9fdd1cc8}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!put\+Pixel@{put\+Pixel}}
+\index{put\+Pixel@{put\+Pixel}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{put\+Pixel()}{putPixel()}}
+{\footnotesize\ttfamily virtual void I\+Display\+Module\+::put\+Pixel (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Display a pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & float coordinate in window \\
+\hline
+{\em y} & float coordinate in window \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_display_module_a535b8212a9e2eaa43517c7c3a8aad0ac}\label{class_i_display_module_a535b8212a9e2eaa43517c7c3a8aad0ac}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!put\+Rect@{put\+Rect}}
+\index{put\+Rect@{put\+Rect}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{put\+Rect()}{putRect()}}
+{\footnotesize\ttfamily virtual void I\+Display\+Module\+::put\+Rect (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{w,  }\item[{float}]{h }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Display an empty rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & coordinates in window \\
+\hline
+{\em y} & coordinates in window \\
+\hline
+{\em w} & width of rect \\
+\hline
+{\em h} & height of rect \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_display_module_abe8a1550641c226b49646abf54f21493}\label{class_i_display_module_abe8a1550641c226b49646abf54f21493}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!put\+Text@{put\+Text}}
+\index{put\+Text@{put\+Text}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{put\+Text()}{putText()}}
+{\footnotesize\ttfamily virtual void I\+Display\+Module\+::put\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text,  }\item[{unsigned int}]{size,  }\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Display some text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & text to display \\
+\hline
+{\em size} & size a caracter, in pixel \\
+\hline
+{\em x} & coordinates in windoww \\
+\hline
+{\em y} & coordinates in windoww \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_display_module_ad78d193932e1fd55d4e956fc8e5cde88}\label{class_i_display_module_ad78d193932e1fd55d4e956fc8e5cde88}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!reset@{reset}}
+\index{reset@{reset}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily virtual void I\+Display\+Module\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+For the core Reset the library \mbox{\Hypertarget{class_i_display_module_ad65106183d94d0019912b7c047ab0551}\label{class_i_display_module_ad65106183d94d0019912b7c047ab0551}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{set\+Color()}{setColor()}}
+{\footnotesize\ttfamily virtual void I\+Display\+Module\+::set\+Color (\begin{DoxyParamCaption}\item[{\hyperlink{class_i_display_module_a1130023f28ca7d10e4a04ef9b698fcbb}{I\+Display\+Module\+::\+Colors}}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Sets the color for all the following draw functions. everything you display after this will have the selected color
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_i_display_module_a1130023f28ca7d10e4a04ef9b698fcbb}{Colors} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em col} & the color of future put\+X\+XX \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_display_module_ab3df0440b279e6e9ad631f43b61cb9ac}\label{class_i_display_module_ab3df0440b279e6e9ad631f43b61cb9ac}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!should\+Be\+Restarted@{should\+Be\+Restarted}}
+\index{should\+Be\+Restarted@{should\+Be\+Restarted}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{should\+Be\+Restarted()}{shouldBeRestarted()}}
+{\footnotesize\ttfamily virtual bool I\+Display\+Module\+::should\+Be\+Restarted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+are key presses must be different than the keys listed in the Keys enum. The keys enum only lists keys used by games, not special keys to switch libraries. \mbox{\Hypertarget{class_i_display_module_a9ed6fcb0e0aaccc0da0617f96fe46582}\label{class_i_display_module_a9ed6fcb0e0aaccc0da0617f96fe46582}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!should\+Exit@{should\+Exit}}
+\index{should\+Exit@{should\+Exit}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{should\+Exit()}{shouldExit()}}
+{\footnotesize\ttfamily virtual bool I\+Display\+Module\+::should\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+are key presses must be different than the keys listed in the Keys enum. The keys enum only lists keys used by games, not special keys to switch libraries. \mbox{\Hypertarget{class_i_display_module_a305f8c4085dd4555c210f09e625395a8}\label{class_i_display_module_a305f8c4085dd4555c210f09e625395a8}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!should\+Go\+To\+Menu@{should\+Go\+To\+Menu}}
+\index{should\+Go\+To\+Menu@{should\+Go\+To\+Menu}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{should\+Go\+To\+Menu()}{shouldGoToMenu()}}
+{\footnotesize\ttfamily virtual bool I\+Display\+Module\+::should\+Go\+To\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+are key presses must be different than the keys listed in the Keys enum. The keys enum only lists keys used by games, not special keys to switch libraries. \mbox{\Hypertarget{class_i_display_module_a7b6a45861835b29679c6c5799b63c4f1}\label{class_i_display_module_a7b6a45861835b29679c6c5799b63c4f1}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!switch\+To\+Next\+Game@{switch\+To\+Next\+Game}}
+\index{switch\+To\+Next\+Game@{switch\+To\+Next\+Game}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{switch\+To\+Next\+Game()}{switchToNextGame()}}
+{\footnotesize\ttfamily virtual bool I\+Display\+Module\+::switch\+To\+Next\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+are key presses must be different than the keys listed in the Keys enum. The keys enum only lists keys used by games, not special keys to switch libraries. \mbox{\Hypertarget{class_i_display_module_ab5fb374a14b78037eab463b2cb1971dd}\label{class_i_display_module_ab5fb374a14b78037eab463b2cb1971dd}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!switch\+To\+Next\+Lib@{switch\+To\+Next\+Lib}}
+\index{switch\+To\+Next\+Lib@{switch\+To\+Next\+Lib}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{switch\+To\+Next\+Lib()}{switchToNextLib()}}
+{\footnotesize\ttfamily virtual bool I\+Display\+Module\+::switch\+To\+Next\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+are key presses must be different than the keys listed in the Keys enum. The keys enum only lists keys used by games, not special keys to switch libraries. \mbox{\Hypertarget{class_i_display_module_a09e20d4bbf16ac3aff8f62c54b4814e3}\label{class_i_display_module_a09e20d4bbf16ac3aff8f62c54b4814e3}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!switch\+To\+Previous\+Game@{switch\+To\+Previous\+Game}}
+\index{switch\+To\+Previous\+Game@{switch\+To\+Previous\+Game}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{switch\+To\+Previous\+Game()}{switchToPreviousGame()}}
+{\footnotesize\ttfamily virtual bool I\+Display\+Module\+::switch\+To\+Previous\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+are key presses must be different than the keys listed in the Keys enum. The keys enum only lists keys used by games, not special keys to switch libraries. \mbox{\Hypertarget{class_i_display_module_a1e23d65af2b94dda013055af15100ebe}\label{class_i_display_module_a1e23d65af2b94dda013055af15100ebe}} 
+\index{I\+Display\+Module@{I\+Display\+Module}!switch\+To\+Previous\+Lib@{switch\+To\+Previous\+Lib}}
+\index{switch\+To\+Previous\+Lib@{switch\+To\+Previous\+Lib}!I\+Display\+Module@{I\+Display\+Module}}
+\subsubsection{\texorpdfstring{switch\+To\+Previous\+Lib()}{switchToPreviousLib()}}
+{\footnotesize\ttfamily virtual bool I\+Display\+Module\+::switch\+To\+Previous\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+are key presses must be different than the keys listed in the Keys enum. The keys enum only lists keys used by games, not special keys to switch libraries. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/I\+Display\+Module.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="IGameModule",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_i_game_module.html",tooltip="You Game class must inherit from IGameModule and have an extern createLib function for work properly..."];
+}

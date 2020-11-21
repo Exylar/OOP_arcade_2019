@@ -1,0 +1,19 @@
+digraph "CoreModule"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="CoreModule",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _display" ];
+  Node2 [label="IDisplayModule",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_i_display_module.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _displaySo" ];
+  Node3 [label="SoLoader\< IDisplayModule \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_so_loader.html"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _prompt" ];
+  Node4 [label="Prompt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_prompt.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _score" ];
+  Node5 [label="HighscoreScreen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_highscore_screen.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _game" ];
+  Node6 [label="IGameModule",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_i_game_module.html"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _gameSo" ];
+  Node7 [label="SoLoader\< IGameModule \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_so_loader.html"];
+}
